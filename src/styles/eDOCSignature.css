@@ -1,0 +1,1436 @@
+@import url(//fonts.googleapis.com/css?family=Oswald:400,300|Dancing+Script|Noto+Sans|Roboto:200,400,500|Open+Sans:400,500);
+
+:root {
+  --memo-background-color: #84cbff;
+  --memo-line-color: #000000;
+  --memo-user-background-color: #ffffff;
+  --required-switch-color: #ecf0ec;
+  --element-icon-size: 2em;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  scrollbar-3dlight-color: #fff;
+  scrollbar-arrow-color: #2d5a9d;
+  scrollbar-darkshadow-color: #fff;
+  scrollbar-face-color: #fff;
+  scrollbar-highlight-color: #2d5a9d;
+  scrollbar-shadow-color: #2d5a9d;
+  scrollbar-track-color: #fff;
+  width: 100%;
+}
+
+textarea {
+  padding-left: 5px;
+}
+
+.modal-dialog {
+  min-width: 400px;
+}
+
+.sig-font {
+  font-family: "Dancing Script", cursive;
+}
+
+.selectsignertable tr {
+  border-bottom: 1px solid #1e9cd7;
+}
+
+.selectsignertable td {
+  font-size: 18px;
+  font-style: normal;
+  height: 40px;
+  padding-left: 5px;
+}
+
+.selectsignertable th {
+  font-size: 20px;
+  font-style: normal;
+  height: 40px;
+  padding-left: 5px;
+}
+
+.scrollWindow {
+  border: 1px solid #aaa;
+  height: 300px;
+  overflow-y: auto;
+  width: 300px;
+}
+
+.scrollWindow2 {
+  border: 1px solid #aaa;
+  height: 200px;
+  overflow-y: auto;
+  width: 300px;
+}
+
+.dragcell {
+  border-left: 1px solid #aaa;
+  cursor: pointer;
+  height: 35px;
+  width: 23px;
+}
+
+.dragcell2 {
+  border-right: 1px solid #9b9b9b;
+  cursor: pointer;
+  width: 23px;
+}
+
+.docDragItem {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  height: 39px;
+  position: absolute;
+  width: 1090px;
+}
+
+.DownloadAllBtn {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.AddNewBtn {
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+.ChkTxt {
+  font-size: 16px;
+  font-style: normal;
+  height: 42px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.CkdBox {
+  border: solid 1px #05a8ff;
+  border-radius: 2px;
+  height: 55px;
+  margin-bottom: 5px;
+  width: 250px;
+}
+
+#EditSignerDiv {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+#EditSignerDlg {
+  background-color: #fff;
+  border: 3px solid #27377c;
+  height: 300px;
+  position: absolute;
+  width: 650px;
+  z-index: 1000;
+}
+
+#AddSignerDiv {
+  background-color: #fff;
+  border: 3px solid #27377c;
+  height: 300px;
+  left: 10px;
+  position: absolute;
+  text-align: center;
+  top: 40px;
+  width: 600px;
+}
+
+.greyedOut {
+  opacity: 0.5;
+}
+
+.EdtTitle {
+  border-bottom: 1px solid #aaa;
+  height: 40px;
+}
+
+.arrow-up {
+  border-bottom: 10px solid #fff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: 0;
+}
+
+.arrow-down {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  height: 0;
+  width: 0;
+}
+
+.NotChecked {
+  /* background-image: url(images/CheckBox.png); */
+  background-position: 0 -5px;
+  background-repeat: no-repeat;
+  background-size: 119px 52px;
+  cursor: pointer;
+  font-size: 6px;
+  font-style: normal;
+  height: 45px;
+  width: 45px;
+}
+
+.Checked {
+  /* background-image: url(images/CheckBox.png); */
+  background-position: -68px -5px;
+  background-repeat: no-repeat;
+  background-size: 119px 52px;
+  cursor: pointer;
+  font-size: 6px;
+  font-style: normal;
+  height: 45px;
+  width: 45px;
+}
+
+.thumbtext {
+  font-size: 8px;
+}
+.canvasBorder {
+  overflow: auto;
+  border-right: 2px solid rgb(187, 182, 182);
+}
+
+.CanvasesDivHolder {
+  /* overflow: scroll; */
+  position: relative;
+  overflow-x: none;
+  overflow-y: auto;
+}
+#ThumbnailDivHolder {
+  overflow-y: scroll;
+}
+.thumbdiv {
+  left: 3px;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+}
+
+.pageNumDiv {
+  text-align: center;
+}
+
+.DocRequestedHeader {
+  background-color: #f5a623;
+  color: #fff;
+  padding-left: 5px;
+}
+
+.ReviewRequestedSendCell {
+  border: solid 1px #f5a623;
+}
+
+.DocReferenceHeader {
+  background-color: #40b445;
+  color: #fff;
+  padding-left: 5px;
+}
+
+.ReviewReferenceSendCell {
+  border: solid 1px #3bb341;
+}
+
+.DocListHeader {
+  background-color: #1e9cd7;
+  color: #fff;
+  padding-left: 5px;
+}
+
+.ReviewSendCell {
+  border: solid 1px #0091d3;
+}
+
+.DocListItemsCell {
+  border-left: 0.25px solid #9b9b9b;
+  height: 100%;
+}
+
+#UploadedDocumentsDiv {
+  height: 175px;
+  overflow-y: auto;
+  width: 1100px;
+}
+
+#progress p.success {
+  background: #0c0 none 0 0 no-repeat;
+}
+
+#progress p.failed {
+  background: #c00 none 0 0 no-repeat;
+}
+
+.SignerListScrollDiv {
+  border: solid 1px #ccc;
+  border-radius: 6px;
+  height: 75px;
+  overflow-y: scroll;
+  padding-left: 5px;
+}
+
+.SignerDiv {
+  float: left;
+}
+
+.UserField {
+  border: 1px solid rgba(90, 90, 90, 1);
+  border-collapse: collapse;
+  font: normal 16px "Times New Roman", Times, serif;
+  position: absolute;
+  z-index: 250;
+}
+
+.UserField > input:focus {
+  outline: none;
+}
+
+.Required {
+  border: 3px solid #000000;
+}
+
+.downarrow {
+  min-width: 127px;
+  min-width: 137px;
+  text-align: left;
+}
+
+.fa-angle-down {
+  float: right;
+  margin-top: 5px;
+  color: #000;
+}
+
+.btn-outline-gray {
+  color: black;
+  border-color: #cecece;
+}
+
+.btn-check:focus + .btn-outline-gray,
+.btn-outline-gray:focus {
+  box-shadow: 0 0 0 0.25rem rgba(243, 243, 243, 0.5);
+}
+
+.btn-check:checked + .btn-outline-gray,
+.btn-check:active + .btn-outline-gray,
+.btn-outline-gray:active,
+.btn-outline-gray.active,
+.btn-outline-gray.dropdown-toggle.show {
+  color: #fff;
+  background-color: #cecece;
+  border-color: #cecece;
+}
+
+.btn-check:checked + .btn-outline-gray:focus,
+.btn-check:active + .btn-outline-gray:focus,
+.btn-outline-gray:active:focus,
+.btn-outline-gray.active:focus,
+.btn-outline-gray.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem rgba(243, 243, 243, 0.5);
+}
+
+.btn-outline-gray:disabled,
+.btn-outline-gray.disabled {
+  color: #f3f3f3;
+  background-color: transparent;
+}
+
+.DateBox {
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8px;
+  position: absolute;
+  z-index: 250;
+}
+
+.UploadForm {
+  display: none;
+  left: 0;
+  position: relative;
+  top: 0;
+}
+
+button#refreshSearchBtn {
+  border-radius: 7px;
+  border: 1px solid rgba(224, 149, 8, 0.808);
+}
+
+.DocHistoryTable {
+  background-color: rgba(0, 0, 0, 0.11);
+  border: 2px solid #979797;
+  font-size: 18px;
+}
+
+.ColumnHeader {
+  color: #4a4a4a;
+  font-weight: 700;
+}
+
+.topbottomborder {
+  border-bottom: 0.5px solid #979797;
+  border-top: 0.5px solid #979797;
+}
+
+.bottomborder {
+  border-bottom: 0.5px solid #979797;
+}
+
+.navrow {
+  border-bottom: 1px solid #aaa;
+  height: 60px;
+}
+
+.topborder {
+  border-top: 1px solid #aaa;
+}
+
+.leftborder {
+  border-left: 1px solid #aaa;
+}
+
+.rightborder {
+  border-right: 1px solid #aaa;
+}
+
+.allborder {
+  border: 1px solid grey;
+}
+
+.btncell {
+  width: 100px;
+}
+
+.orangebtn {
+  background-color: #faab23;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+}
+
+.greenBtn {
+  background-color: #39b54a;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+}
+
+.greenBtnwide {
+  background-color: #39b54a;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 160px;
+}
+
+.greenBtn[disabled] {
+  background-color: #19b43a;
+  border: 1px solid grey;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.bluebtn[disabled] {
+  background-color: #00a4cb;
+  border: 1px solid grey;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.redbtnwide {
+  background-color: #fa0914;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 120px;
+}
+
+.redbtn[disabled] {
+  background-color: #fa0914;
+  border: 1px solid grey;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.signersbtn {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+}
+
+.selectboxdiv {
+  border: solid 1px #aaa;
+  cursor: pointer;
+  height: 25px;
+  width: 220px;
+}
+
+.selectboxtxt {
+  color: #000;
+  font-size: 14px;
+  padding-left: 4px;
+  width: 150px;
+}
+
+.selectboxstarred {
+  font-size: 14px;
+  width: 15px;
+}
+
+.selectboxdwnarrw {
+  border-left: solid 1px #aaa;
+  color: #aaa;
+  font-size: 14px;
+  width: 15px;
+}
+
+.ColHeader {
+  cursor: pointer;
+  height: 35px;
+}
+
+.grey {
+  color: #333;
+}
+
+.topbrd {
+  border-top: solid 1px #aaa;
+}
+
+.bottombrd {
+  border-bottom: solid 1px #aaa;
+}
+
+.rightbrd {
+  border-right: solid 1px #aaa;
+}
+
+.leftbrd {
+  border-left: solid 1px #aaa;
+}
+
+.PckgRow td {
+  border-bottom: solid 1px #aaa;
+  color: #222;
+  font-size: 16px;
+  word-break: break-all;
+}
+
+.DocRow td {
+  border-bottom: solid 1px #aaa;
+  color: #222;
+  font-size: 16px;
+}
+
+.docresult {
+  height: 30px;
+}
+
+.TagAddIcon {
+  cursor: pointer;
+  height: 40px;
+}
+
+.editsetupicon {
+  cursor: pointer;
+  height: 30px;
+  width: 34px;
+}
+
+.editsharingicon {
+  cursor: pointer;
+  height: 36px;
+  width: 33px;
+}
+
+.signicon {
+  height: 36px;
+  width: 36px;
+}
+
+.AddDocTxt {
+  color: #999;
+  cursor: pointer;
+}
+
+.ediBtn {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+}
+
+.navBack {
+  background-color: #0071bc;
+  border: 1px solid #0071bc;
+}
+
+.navNext {
+  background-color: #39b54a;
+  border: 1px solid #39b54a;
+}
+
+.navNext:disabled {
+  background-color: #9b9b9b;
+  border: 1px solid #9b9b9b;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.navCancel {
+  background-color: #f5a623;
+  border: 1px solid #f5a623;
+}
+
+.navDelete {
+  background-color: #d0021b;
+  border: 1px solid #d0021b;
+}
+
+.backbtn {
+  color: grey;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.Databtn {
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+}
+
+.ReplaceDocbtn {
+  cursor: pointer;
+  height: 36px;
+  width: 28px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.footer {
+  min-height: 8vh;
+}
+
+.LoginFooter {
+  background-color: #f4f4f4;
+  border: solid 1px rgba(150, 150, 150, 0.46);
+}
+
+.FooterText {
+  font-size: 14px;
+}
+
+.SearchHeader {
+  color: #000;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.ghost {
+  color: #999;
+  font-style: italic;
+  height: 55px;
+  width: 400px;
+}
+
+.helpbutton {
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31px;
+  width: 37px;
+}
+
+.shown {
+  display: table-cell;
+}
+
+.textfield {
+  color: #000;
+  font-style: normal;
+  height: 55px;
+  width: 400px;
+}
+
+.SortSignerCell {
+  border-bottom: 0.5px solid #979797;
+  border-top: 0.5px solid #979797;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  padding: 4px;
+}
+
+.SortSignerCellAction {
+  font-style: normal;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.SearchTextField {
+  color: #000;
+  font-style: normal;
+  height: 30px;
+  width: 170px;
+}
+
+.HeaderText {
+  font-style: bold;
+}
+
+.spacer {
+  font-size: 6px;
+  height: 10px;
+}
+
+.browse {
+  color: #0071bc;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.ReportRow {
+  background: #fff;
+  border-bottom: solid 1px #bbb;
+  border-left: solid 1px #bbb;
+  border-right: solid 1px #bbb;
+  cursor: pointer;
+  height: 35px;
+}
+
+.ReportRowOdd {
+  background: #dee4ed;
+  border-bottom: solid 1px #bbb;
+  border-left: solid 1px #bbb;
+  border-right: solid 1px #bbb;
+  cursor: pointer;
+  height: 35px;
+}
+
+.TemplateRow {
+  background: #fff;
+  border-bottom: solid 1px #bbb;
+  border-left: solid 1px #bbb;
+  border-right: solid 1px #bbb;
+  cursor: pointer;
+  height: 50px;
+}
+
+.CkdGry {
+  /* background-image: url(../images/Group_icon.png); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+#HeaderPreviewBtn {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 16pt;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+  padding: 0.5em;
+}
+
+#ButtonPreviewBtn {
+  background-clip: padding-box;
+  border-radius: 4px;
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14pt;
+  font-weight: 300;
+  padding-left: 18px;
+  padding-right: 18px;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.EmailListTable {
+  border: 1px solid #9b9b9b;
+}
+
+.emailTemplateInput {
+  border: 1px solid #979797;
+  height: 50px;
+  padding-left: 5px;
+  width: 500px;
+}
+
+.userSel {
+  max-width: 130px;
+}
+
+.popupHeader {
+  background-color: #2a74a2;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 40px;
+}
+
+.paymentIcon {
+  color: #39b54a;
+  font-size: 30px;
+}
+
+.paymentIconBlack {
+  color: #000;
+  font-size: 30px;
+}
+
+.SgnrSlctCell {
+  max-height: 200px;
+  overflow-y: scroll;
+  width: 700px;
+}
+
+.SgnrSlctCellSettings {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.FASigElementIcon {
+  color: #2973a1;
+  cursor: pointer;
+  font-size: var(--element-icon-size);
+}
+
+.FAStandardIcon {
+  color: #2973a1;
+  cursor: pointer;
+  font-size: 1.7em;
+}
+
+.FAUploadIcon {
+  --fa-primary-color: #40b445;
+  --fa-primary-opacity: 1;
+  --fa-secondary-color: #fff;
+  --fa-secondary-opacity: 1;
+  cursor: pointer;
+  font-size: 1.7em;
+}
+
+.FAUploadIconOnWhite {
+  color: #40b445;
+  cursor: pointer;
+  font-size: 2.3em;
+}
+
+.FAUploadIconBlue {
+  --fa-primary-color: #fff;
+  --fa-primary-opacity: 1;
+  --fa-secondary-color: #2973a1;
+  --fa-secondary-opacity: 1;
+  cursor: pointer;
+  font-size: 1.7em;
+}
+
+.FAAddSignerIcon {
+  --fa-primary-color: grey;
+  --fa-primary-opacity: 1;
+  --fa-secondary-color: #40b445;
+  --fa-secondary-opacity: 1;
+  cursor: pointer;
+  font-size: 1.7em;
+}
+
+.FAFileIcon {
+  font-size: 1.7em;
+}
+
+.FileIconContainer {
+  height: 39px;
+  padding-left: 5px;
+  width: 50px;
+}
+
+.FAFolderIcon {
+  color: #4a9dc3;
+  cursor: pointer;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.Orange {
+  color: #f5a623;
+}
+
+.Green {
+  color: #40b445;
+}
+
+.Gray {
+  color: #969696;
+}
+
+.Blue {
+  color: #2973a1;
+}
+
+.Pink {
+  color: #be10e0;
+}
+
+.Yellow {
+  color: #f8e71c;
+}
+
+.White {
+  color: #fff;
+}
+
+.SettingsListInput {
+  width: 325px;
+}
+
+.subbtn {
+  background-color: #05a8ff;
+  border: 1px solid grey;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  width: 110px;
+}
+
+.subbtnactive {
+  background-color: #fff;
+  border: 1px solid grey;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  color: #0082cb;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  width: 110px;
+}
+
+img,
+a {
+  border: none;
+  outline: none;
+}
+
+td,
+th {
+  font-size: 18px;
+  font-style: normal;
+}
+
+label,
+.smallfont,
+.EdtTitle td,
+.searchtext {
+  font-size: 14px;
+}
+
+.RequestedDocIcon,
+.ErrorIcon {
+  height: 50px;
+  width: 50px;
+}
+
+.thumbstar,
+.thumbastr {
+  font-size: 22px;
+}
+
+#RefDocumentsDiv,
+#ReqDocumentsDiv {
+  height: 125px;
+  overflow-y: auto;
+  width: 1100px;
+}
+
+.refedit,
+.refedit td {
+  border-style: hidden;
+}
+
+.signersmall,
+.requestee {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.managedocicon,
+.refdocviewers {
+  cursor: pointer;
+  height: 30px;
+  width: 35px;
+}
+
+.SigBox,
+.InitBox {
+  border-collapse: collapse;
+  font-size: 8px;
+  position: absolute;
+  z-index: 250;
+}
+
+.sendnowbtn,
+.bluebtnwide {
+  background-color: #0082cb;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 120px;
+}
+
+.bluebtn,
+.linkbtn {
+  background-color: #0082cb;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+}
+
+.redbtn,
+.deletebtn {
+  background-color: #fa0914;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+}
+
+.TagIcn {
+  float: left;
+  top: 3px;
+  left: 3px;
+}
+
+.TagIcn {
+  float: left;
+  top: 3px;
+  left: 3px;
+}
+
+.TagWhiteIcon,
+.TagLightBlueIcon,
+.TagBlueIcon {
+  height: 40px;
+}
+
+.editrefsetupicon,
+.editrefsignersicon,
+.editreqsignersicon,
+.editsignersicon,
+.editindexdataicon {
+  cursor: pointer;
+  height: 30px;
+  width: 28px;
+}
+
+.ReviewHeader,
+.Black {
+  color: #000;
+}
+
+.InstructionsHeader,
+.UploadInstructionsHeader {
+  color: #4a4a4a;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.Instructions,
+.UploadInstructions {
+  color: #9b9b9b;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.AddDocTableHead,
+.paymentAmount {
+  font-size: 20px;
+}
+
+.SortSignerHeader,
+.SortSignerHeaderAsc,
+.SortSignerHeaderDesc {
+  color: #000;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.ReportRowOdd:hover,
+.ReportRow:hover {
+  background: #cff;
+  color: #000;
+}
+
+.ReportRow td,
+.ReportRowOdd td {
+  font-size: 16px;
+}
+
+.PckgRow td.DocumentsSignedStatus,
+.PckgRow td.DeclinedStatus,
+.PckgRow td.CanceledStatus,
+.PckgRow td.CompletedStatus,
+.PckgRow td.OutForeSignStatus,
+.PckgRow td.ReadyToSignStatus {
+  color: #fff;
+  height: 40px;
+  padding-top: 6px;
+  width: 60px;
+}
+
+.PckgRow td.CreatedOnlineStatus,
+.PckgRow td.WaitingforDocStatus,
+.PckgRow td.OpenStatus,
+.PckgRow td.SavedStatus {
+  color: #000;
+  height: 40px;
+  padding-top: 6px;
+  width: 60px;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden;
+  /* Hidden by default. Visible on click */
+  min-width: 250px;
+  /* Set a default minimum width */
+  margin-left: -125px;
+  /* Divide value of min-width by 2 */
+  text-align: center;
+  /* Centered text */
+  padding: 16px;
+  /* Padding */
+  position: fixed;
+  /* Sit on top of the screen */
+  z-index: 1000000;
+  /* Add a z-index if needed */
+  left: 50%;
+  /* Center the snackbar */
+  bottom: 100px;
+  /* 30px from the bottom */
+
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  color: #0071bc;
+  background-color: rgba(226, 239, 245, 0.9);
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  visibility: visible;
+  /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 100px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 100px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 100px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 100px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.pendingDocsDrop {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.SetupDocCell {
+  user-select: none;
+}
+
+.BiggerBox {
+  width: 1.75em !important;
+  height: 1.75em !important;
+  margin-top: 0px !important;
+  cursor: pointer;
+}
+
+.MemoBox {
+  overflow-wrap: break-word;
+}
+
+.Memo {
+  border-collapse: collapse;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* border: 1px solid black; */
+  font-family: "Courier New", monospace;
+  position: absolute;
+  z-index: 250;
+  height: 100%;
+  width: 100%;
+  opacity: 80%;
+  overflow-wrap: break-word;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #000000;
+
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    var(--memo-line-color) 32px
+  );
+}
+
+.MemoFontSizeButton {
+  color: grey;
+  height: 35;
+  width: 35;
+}
+
+.ListboxAddButton {
+  color: grey;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.ListboxAddButton:hover {
+  color: #5cb85c;
+}
+
+.MemoFontSizeButton:hover:last-of-type {
+  color: #5cb85c;
+}
+
+.MemoFontSizeButton:hover:first-of-type {
+  color: #d9534f;
+}
+
+.form-control.MemoFontSizeBox {
+  height: 38px;
+  text-align: center;
+}
+
+.form-control.MemoFontSizeBox:disabled {
+  background-color: #f5f5f5;
+}
+
+.unlinkFontHeightButton {
+  color: grey;
+  height: 35;
+  width: 35;
+}
+
+.unlinkFontHeightButton:hover {
+  color: #5bc0de;
+  cursor: pointer;
+}
+
+.form-switch .form-check-input:focus {
+  border-color: rgba(0, 0, 0, 0.25);
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.form-switch .form-check-input:checked {
+  background-color: var(--required-switch-color);
+  border-color: #5bc0de;
+  border: none;
+}
+
+.DateField {
+  white-space: nowrap;
+  position: absolute;
+}
+
+.ListBox {
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8px;
+  position: absolute;
+  z-index: 250;
+}
+
+.ListBoxTrashCan {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.ListBoxTrashCan:hover {
+  color: #d9534f;
+}
+
+.PersonalMessage {
+  resize: none;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #e9ecef;
+}
+
+table.dataTable > thead .sorting_asc.reorder.noVis:before,
+table.dataTable > thead .sorting_desc.reorder.noVis:after,
+table.dataTable > thead .sorting_asc.reorder.noVis:after,
+table.dataTable > thead .sorting_desc.reorder.noVis:before {
+  content: "" !important;
+}
+
+.selectable.selected {
+  background-color: var(--bs-primary) !important;
+  color: white;
+}
+
+.selectable:hover {
+  background-color: var(--bs-light) !important;
+}
+
+.selectable.selected:hover {
+  background-color: var(--bs-primary) !important;
+  color: white;
+}
+
+.memoLinkButtonsHidden {
+  opacity: 0;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0d72b9 #aed8f7;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #aed8f7;
+  border-radius: 15px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2973a1 0%, #54b4d8 100%);
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.page_link {
+  text-decoration: none;
+}
+
+#page_right_bar .current {
+  border: 5px solid yellow;
+}

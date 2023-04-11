@@ -1,0 +1,135 @@
+.sidebar_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+}
+.sidebar_header-container {
+  display: grid;
+  padding-left: 32px;
+  padding-top: 20px;
+  grid-template-columns: 1fr 1.5rem;
+}
+p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sidebar_icon {
+  color: #2973a1 !important;
+  cursor: pointer;
+}
+
+.sidebar_header-icon-container {
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.participants_conatiner {
+  width: 90%;
+  margin: 16px auto 0;
+}
+.participant_username {
+  border: 2px solid white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-weight: normal;
+  width: 100%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  background-color: inherit;
+}
+.full_name_input:focus {
+  outline: none;
+}
+.full_name_input {
+  border: none;
+  text-align: center;
+}
+.participant_username_heading {
+  cursor: pointer;
+}
+
+.participant_delete_icon {
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+.toggle_button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.participant_input_label {
+  font-size: 12px;
+  padding: 8px !important;
+}
+.participant_input {
+  font-size: 12px;
+  padding: 12px 8px 8px !important;
+  height: auto;
+  min-height: 42px !important;
+}
+.form_input_text {
+  height: auto;
+}
+
+.form-floating .form-control {
+  border-radius: 0;
+  height: auto;
+}
+
+.form-floating .form-select {
+  border-radius: 0;
+
+  padding: 12px 8px 8px !important;
+  height: auto;
+}
+.participant_item {
+  margin-bottom: 1.5rem;
+  background-color: #57add0;
+  padding: 12px;
+  transition: height 0.5s ease;
+  position: relative;
+}
+
+.bg-skin {
+  background-color: #dfae73;
+}
+
+.bg-blue {
+  background-color: #84cbff;
+}
+
+.bg-light_green {
+  background-color: #d4e4cf;
+}
+
+.bg-light_yellow {
+  background-color: #f6f9d3;
+}
+.form_icon {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.advanced_feature_container {
+  color: #438fa2;
+}

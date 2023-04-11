@@ -1,0 +1,273 @@
+.main_container {
+  padding: 32px;
+}
+.folder {
+  font-size: 25px;
+  height: 100px;
+  width: 550px;
+  background-color: rgb(45, 119, 165);
+  padding: 20px 100px 20px;
+  color: white;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid rgb(45, 119, 165);
+}
+.belowFolder {
+  background-color: rgb(45, 119, 165);
+  padding: 50px 100px 50px;
+}
+.manage_btn {
+  background-color: rgb(0, 135, 180);
+  color: white !important;
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 30px;
+  border: 3px solid white;
+}
+.internalDiv {
+  background-color: white;
+  padding: 16px 32px;
+}
+.packagename_field {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  height: 40px;
+}
+
+.field_name {
+  font-weight: bold;
+  padding-right: 10px;
+  min-width: 144px;
+}
+.field_input {
+  padding-right: 10px;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.btn_fieldinput {
+  background-color: white;
+  font-size: 16px;
+  align-items: center;
+  border: 3px solid rgb(0, 135, 180);
+  height: 40px;
+  width: 110px;
+}
+.icon-color {
+  color: rgb(45, 119, 165);
+  margin: 5px 5px 2px 3px;
+}
+.notification_field {
+  display: flex;
+  font-size: 15px;
+}
+.URL_field {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+}
+.URL_field_input {
+  flex: 1;
+}
+
+.security_field {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+}
+.sec_field_name {
+  font-weight: bold;
+  margin: 0px 5px 0px;
+}
+.sec_field_heading {
+  font-weight: bold;
+}
+.checkbox_sec {
+  color: rgb(249, 249, 221);
+  margin: 0px 10px 10px 30px;
+}
+.checkbox_sec_two {
+  color: rgb(249, 249, 221);
+  margin: 0px 10px 10px 30px;
+}
+.security_field_input {
+  height: 35px;
+}
+.Participants_field {
+  font-weight: bold;
+}
+.Participants_field ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.divformatting {
+  height: 320px;
+}
+.listformatting {
+  height: 100px;
+  margin-bottom: 10px;
+}
+.participant_details {
+  padding: 8px 16px 8px 4px;
+  display: flex;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100%;
+  align-items: center;
+}
+.blockname {
+  width: 10%;
+}
+.block_details {
+  background-color: white;
+  height: 65px;
+  width: 90%;
+  display: block;
+  border-radius: 5px;
+}
+.inputFields {
+  display: flex;
+  margin: 10px 0px;
+}
+.blue-color {
+  color: rgb(45, 119, 165);
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  margin-right: 10px; 
+  margin-top: 4px; 
+  
+}
+.fullname_field {
+  display: flex;
+  margin-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.participant_heading {
+  font-size: 15px;
+  margin-bottom: 0;
+  margin: 0 0 8px;
+}
+
+.fieldformatting {
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 5px;
+  height: 45px;
+  font-size: 10px;
+  color: rgb(190, 190, 190);
+  box-sizing: border-box;
+  padding-right: 8px;
+  flex: 1;
+  width:20%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.fieldformatting div{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.icon_styling {
+  color: white;
+  background-color: rgb(223, 223, 223);
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 5px;
+  height:35px;
+  width:35px;
+
+}
+.icons{
+  overflow: hidden;
+  white-space: nowrap;
+}
+.icons i{
+  margin-right: 10px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: lighter;
+  display: flex;
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.email_field {
+  display: flex;
+  min-width: 50px;
+  margin-right: 10px;
+}
+.email_field p {
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 5px;
+  height: 35px;
+  font-size: 10px;
+  color: rgb(190, 190, 190);
+}
+.vl {
+  border-left: 2px solid rgb(190, 190, 190);
+  height: 45px;
+  margin-right: 10px;
+}
+.notify_field {
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+  height: 45px;
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.notify_field_formatting {
+  font-size: 9px;
+  color: rgb(190, 190, 190);
+  margin: 0px 5px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.auth_field {
+  display: flex;
+  height: 45px;
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  color: rgb(190, 190, 190);
+}
+.signing_order_field {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 5px;
+  padding-right: 4px;
+}
+.signing_order_formatting {
+  font-size: 9px;
+  margin-left:5px;
+  color: rgb(190, 190, 190);
+}
+.delegate_field {
+  color: rgb(190, 190, 190);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.delegate_field p {
+  font-size: 9px;
+  font-weight: normal;
+}

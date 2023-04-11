@@ -1,0 +1,160 @@
+.select_package_container {
+    background-image: url("/public/images/Folder_dotted.png");
+    background-repeat: no-repeat;
+    background-size: 100% calc(100vh - 130px);
+    padding: 1rem 1rem 3rem;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .header_container {
+    margin-left: 35px;
+    margin-top: 16px;
+  }
+  .input_div{
+    height: 40px;
+    width: 350px;
+    border: 1px solid black;
+    padding-top: 5px;
+  }
+  .sign_documents{
+    height: 40px;
+    width: 400px;
+    border: 1px solid rgb(183, 181, 181);
+    padding-top: 5px;
+    float: left;
+  }
+  .documents_status{
+    height: 40px;
+    width: 150px;
+    padding-left:10px;
+    padding-top: 5px;
+    float: left;
+  }
+  .circular_div_manager {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 5px 10px 5px;
+    z-index: 1;
+    position: absolute;
+    left: 715px;
+  }
+  .circular_div_participant {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 5px 20px 10px;
+    
+  }
+  .circular_icon{
+    display: flex;
+
+  }
+  .background_yellow{
+    background-color: rgb(242, 173, 62);
+  }
+  .fields{
+    width:40%
+  }
+  .header_container button{
+    background-color: rgb(0, 135, 180);
+    color: white;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 30px;
+    border: 2px solid white;
+    margin: 20px 0px;
+}
+  .upload_container {
+    padding: 32px;
+  }
+  .dropzone_container {
+    width: 100%;
+  }
+  .dropzone_header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e9cd7;
+    align-items: center;
+    padding: 8px 16px;
+  }
+  .header_text {
+    color: white;
+    margin: 0;
+  }
+  .drop_container_main {
+    border: 2px dashed #1e9cd7;
+    border-top: none;
+    padding-top:10px;
+    display: flex;
+    height: 200px;
+    width:100%;
+    margin-bottom: 20px;
+  }
+  .drop_icons{
+    float: right;
+  }
+  .dropzone_subcontainer_1{
+    width: 60%;
+    margin-left: 30px;
+    display: flex;
+  }
+  .dropzone_sub_container{
+    border: 2px dashed #1e9cd7;
+    border-top: none;
+    padding: 48px 0 48px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-y: auto;
+    height: 200px;
+    margin-bottom: 20px;
+    
+  }
+ 
+  .main_container {
+    max-width: 100vw;
+    box-sizing: border-box;
+    height: calc(100vh - 65px);
+  }
+  .background_green{
+    background-color:#40b445;
+  }
+  .background_blue{
+    background-color:#1e9cd7;
+  }
+  .border_green{
+    border-color:#40b445;
+  }
+  .background_yellow{
+    background-color: rgb(244, 165, 34);
+  }
+  .border_yellow{
+    border-color:rgb(244, 165, 34);;
+  }
+  .dropzone_content {
+    max-width: 600px;
+    color: gray;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+  }
+  .color_white {
+    color: white;
+  }
+  .color_blue{
+    color:#1e9cd7;
+    margin-right: 10px;
+  }
+  .blue{
+    color:#1e9cd7;
+  }
+  .header_content{
+    display:flex;
+  }
+  .header_content div{
+    margin-right:10px;
+  }
